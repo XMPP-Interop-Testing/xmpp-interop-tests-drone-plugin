@@ -50,14 +50,14 @@ pipeline:
                     connectorRef: GitHub_Container_Registry
                     repo: ghcr.io/xmpp-interop-testing/sintse-drone
                     tags:
-                      - <+pipeline.sequenceId>
+                      - internal-ci
               - step:
                   type: Plugin
                   name: Run Drone plugin against XMPP server
                   identifier: Run_Drone_plugin_against_XMPP_server
                   spec:
                     connectorRef: GitHub_Container_Registry
-                    image: ghcr.io/xmpp-interop-testing/sintse-drone:<+pipeline.sequenceId>
+                    image: ghcr.io/xmpp-interop-testing/sintse-drone:internal-ci
                     settings:
                       DOMAIN: example.org
                       HOST: xmppserver
