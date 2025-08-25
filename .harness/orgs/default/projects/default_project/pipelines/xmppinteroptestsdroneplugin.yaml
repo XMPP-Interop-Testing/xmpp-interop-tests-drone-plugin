@@ -61,4 +61,6 @@ pipeline:
                     settings:
                       DOMAIN: example.org
                       HOST: xmppserver
+                      ADMINACCOUNTUSERNAME: admin
+                      ADMINACCOUNTPASSWORD: admin
                   description: Executes the Drone Plugin against the XMPP server that has been created earlier in this Pipeline.
