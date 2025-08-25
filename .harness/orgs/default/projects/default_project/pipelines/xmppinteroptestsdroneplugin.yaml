@@ -36,7 +36,7 @@ pipeline:
                   identifier: xmppserver
                   spec:
                     connectorRef: Openfire_GitHub_Package_Registry
-                    image: igniterealtime/openfire:main
+                    image: ghcr.io/igniterealtime/openfire:main
                     shell: Sh
                     command: "-demoboot"
                 contextType: Pipeline
