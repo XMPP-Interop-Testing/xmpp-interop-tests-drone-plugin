@@ -31,6 +31,15 @@ pipeline:
           execution:
             steps:
               - step:
+                  type: BuildAndPushDockerRegistry
+                  name: Build and push to GHCR
+                  identifier: Build_and_push_to_GHCR
+                  spec:
+                    connectorRef: GitHub_Container_Registry
+                    repo: ghcr.io/xmpp-interop-testing/sintse-drone
+                    tags:
+                      - <+pipeline.sequenceId>
+              - step:
                   type: Action
                   name: Download and Launch Openfire
                   identifier: Start_Openfire
