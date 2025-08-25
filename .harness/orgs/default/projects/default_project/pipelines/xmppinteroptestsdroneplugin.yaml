@@ -48,7 +48,7 @@ pipeline:
                   identifier: Build_and_push_to_GHCR
                   spec:
                     connectorRef: GitHub_Container_Registry
-                    repo: ghcr.io/xmpp-interop-testing/sintse-drone
+                    repo: ghcr.io/xmpp-interop-testing/drone-xmpp-test
                     tags:
                       - internal-ci
               - step:
@@ -58,7 +58,7 @@ pipeline:
                   description: Executes the Drone Plugin against the XMPP server that has been created earlier in this Pipeline
                   spec:
                     connectorRef: GitHub_Container_Registry
-                    image: ghcr.io/xmpp-interop-testing/sintse-drone:internal-ci
+                    image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:internal-ci
                     reports:
                       type: JUnit
                       spec:
