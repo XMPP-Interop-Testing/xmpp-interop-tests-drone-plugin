@@ -28,8 +28,16 @@ if [ "$PLUGIN_DISABLEDTESTS" != "" ]; then
     ENTRYCMD+=("--disabledTests=$PLUGIN_DISABLEDTESTS")
 fi
 
+if [ "$PLUGIN_ENABLEDTESTS" != "" ]; then
+    ENTRYCMD+=("--enabledTests=$PLUGIN_ENABLEDTESTS")
+fi
+
 if [ "$PLUGIN_DISABLEDSPECIFICATIONS" != "" ]; then
     ENTRYCMD+=("--disabledSpecifications=$PLUGIN_DISABLEDSPECIFICATIONS")
+fi
+
+if [ "$PLUGIN_ENABLEDSPECIFICATIONS" != "" ]; then
+    ENTRYCMD+=("--enabledSpecifications=$PLUGIN_ENABLEDSPECIFICATIONS")
 fi
 
 echo "Running: ${ENTRYCMD[*]}"
