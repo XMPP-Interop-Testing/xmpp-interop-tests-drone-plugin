@@ -54,3 +54,11 @@ pipeline:
                           - AllErrors
                         action:
                           type: Ignore
+              - step:
+                  type: Plugin
+                  name: Run Drone plugin against XMPP server
+                  identifier: Run_Drone_plugin_against_XMPP_server
+                  spec:
+                    connectorRef: GitHub_Container_Registry
+                    image: sintse-drone
+                  description: Executes the Drone Plugin against the XMPP server that has been created earlier in this Pipeline.
