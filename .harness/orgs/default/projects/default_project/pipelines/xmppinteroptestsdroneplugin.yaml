@@ -58,6 +58,11 @@ pipeline:
                   spec:
                     connectorRef: GitHub_Container_Registry
                     image: ghcr.io/xmpp-interop-testing/sintse-drone:internal-ci
+                    reports:
+                      type: JUnit
+                      spec:
+                        paths:
+                          - "**/*.xml"
                     settings:
                       DOMAIN: example.org
                       HOST: xmppserver
