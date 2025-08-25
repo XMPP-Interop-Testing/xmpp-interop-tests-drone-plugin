@@ -1,0 +1,14 @@
+inputSet:
+  name: GitHub
+  identifier: GitHub
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: xmppinteroptestsdroneplugin
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
