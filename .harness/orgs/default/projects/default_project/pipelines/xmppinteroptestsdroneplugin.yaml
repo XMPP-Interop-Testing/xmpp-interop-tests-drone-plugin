@@ -32,8 +32,10 @@ pipeline:
             steps:
               - step:
                   type: Action
-                  name: Launch Openfire
+                  name: Download and Launch Openfire
                   identifier: Start_Openfire
                   spec:
                     uses: igniterealtime/launch-openfire-action@main
+                    with:
+                      daily: "true"
                   description: Launches an XMPP server (Openfire), using a GitHub Action.
