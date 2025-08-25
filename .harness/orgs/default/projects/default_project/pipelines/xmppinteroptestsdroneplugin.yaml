@@ -39,3 +39,9 @@ pipeline:
                     with:
                       daily: "true"
                   description: Launches an XMPP server (Openfire), using a GitHub Action.
+                  failureStrategies:
+                    - onFailure:
+                        errors:
+                          - AllErrors
+                        action:
+                          type: Ignore
