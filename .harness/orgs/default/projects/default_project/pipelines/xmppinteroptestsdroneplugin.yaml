@@ -62,18 +62,3 @@ pipeline:
                       DOMAIN: example.org
                       HOST: xmppserver
                   description: Executes the Drone Plugin against the XMPP server that has been created earlier in this Pipeline.
-              - step:
-                  type: Action
-                  name: Download and Launch Openfire
-                  identifier: Start_Openfire
-                  spec:
-                    uses: igniterealtime/launch-openfire-action@main
-                    with:
-                      daily: "true"
-                  description: Launches an XMPP server (Openfire), using a GitHub Action.
-                  failureStrategies:
-                    - onFailure:
-                        errors:
-                          - AllErrors
-                        action:
-                          type: Ignore
