@@ -35,5 +35,5 @@ pipeline:
                   name: Launch Openfire
                   identifier: Start_Openfire
                   spec:
-                    uses: igniterealtime/launch-openfire-action
+                    uses: igniterealtime/launch-openfire-action@main
                   description: Launches an XMPP server (Openfire), using a GitHub Action.
