@@ -38,7 +38,9 @@ pipeline:
                     connectorRef: Openfire_GitHub_Package_Registry
                     image: ghcr.io/igniterealtime/openfire:main
                     shell: Sh
-                    command: "-demoboot"
+                    entrypoint:
+                      - /sbin/entrypoint.sh
+                      - "-demoboot"
                 contextType: Pipeline
               - step:
                   type: BuildAndPushDockerRegistry
