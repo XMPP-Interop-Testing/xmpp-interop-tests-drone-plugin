@@ -35,4 +35,4 @@ pipeline:
                   name: Start Openfire
                   identifier: Start_Openfire
                   spec:
-                    uses: https://github.com/igniterealtime/Openfire/tree/main/.github/actions/startserver-action
+                    uses: igniterealtime/Openfire/.github/actions/startserver-action
