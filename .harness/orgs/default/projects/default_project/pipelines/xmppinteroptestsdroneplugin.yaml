@@ -65,9 +65,9 @@ pipeline:
                         paths:
                           - "**/*.xml"
                     settings:
-                      DOMAIN: example.org
-                      HOST: xmppserver
-                      ADMINACCOUNTUSERNAME: admin
-                      ADMINACCOUNTPASSWORD: admin
-                      ENABLEDSPECIFICATIONS: XEP-0115,XEP-0199,XEP-0352
+                      host: xmppserver
+                      domain: example.org
+                      adminAccountUsername: admin
+                      adminAccountPassword: admin
+                      enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
                     imagePullPolicy: Always
