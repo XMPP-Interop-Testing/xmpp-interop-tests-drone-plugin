@@ -42,15 +42,14 @@ The plugin can be configured using the following settings:
 ## Basic Configuration (for Drone)
 
 ```yaml
-- step:
-    name: Run XMPP Interop Framework tests against XMPP server
-    image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:latest
-    settings:
-      host: xmppserver
-      domain: example.org
-      adminAccountUsername: admin
-      adminAccountPassword: admin
-      enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
+- name: runtests
+  image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:latest
+  settings:
+    host: xmppserver
+    domain: shakespeare.lit
+    adminAccountUsername: admin
+    adminAccountPassword: admin
+    enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
 ```
 
 ## Basic Configuration (for Harness)
@@ -59,10 +58,9 @@ The plugin can be configured using the following settings:
 - step:
     type: Plugin
     name: Run XMPP Interop Framework tests against XMPP server
-    identifier: Run_Drone_plugin_against_XMPP_server
+    identifier: Run_Tests_against_XMPP_server
     description: Executes the Drone Plugin against the XMPP server that has been created earlier in this Pipeline
     spec:
-      connectorRef: GitHub_Container_Registry
       image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:latest
       reports:
         type: JUnit
@@ -71,7 +69,7 @@ The plugin can be configured using the following settings:
             - "**/*.xml"
       settings:
         host: xmppserver
-        domain: example.org
+        domain: shakespeare.lit
         adminAccountUsername: admin
         adminAccountPassword: admin
         enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
@@ -79,15 +77,15 @@ The plugin can be configured using the following settings:
 
 ## Basic Configuration (for Woodpecker)
 ```yaml
-- step:
-    name: Run XMPP Interop Framework tests against XMPP server
-    image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:latest
-    settings:
-      host: xmppserver
-      domain: example.org
-      adminAccountUsername: admin
-      adminAccountPassword: admin
-      enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
+
+- name: runtests
+  image: ghcr.io/xmpp-interop-testing/drone-xmpp-test:latest
+  settings:
+    host: xmppserver
+    domain: shakespeare.lit
+    adminAccountUsername: admin
+    adminAccountPassword: admin
+    enabledSpecifications: XEP-0115,XEP-0199,XEP-0352
 ```
 
 ## Usage Example
