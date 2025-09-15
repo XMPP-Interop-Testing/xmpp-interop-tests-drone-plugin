@@ -24,6 +24,30 @@ if [ "$PLUGIN_ADMINACCOUNTPASSWORD" != "" ]; then
     ENTRYCMD+=("--adminAccountPassword=$PLUGIN_ADMINACCOUNTPASSWORD")
 fi
 
+if [ "$PLUGIN_ACCOUNTONEUSERNAME" != "" ]; then
+    ENTRYCMD+=("--accountOneUsername=$PLUGIN_ACCOUNTONEUSERNAME")
+fi
+
+if [ "$PLUGIN_ACCOUNTONEPASSWORD" != "" ]; then
+    ENTRYCMD+=("--accountOnePassword=$PLUGIN_ACCOUNTONEPASSWORD")
+fi
+
+if [ "$PLUGIN_ACCOUNTTWOUSERNAME" != "" ]; then
+    ENTRYCMD+=("--accountTwoUsername=$PLUGIN_ACCOUNTTWOUSERNAME")
+fi
+
+if [ "$PLUGIN_ACCOUNTTWOPASSWORD" != "" ]; then
+    ENTRYCMD+=("--accountTwoPassword=$PLUGIN_ACCOUNTTWOPASSWORD")
+fi
+
+if [ "$PLUGIN_ACCOUNTTHREEUSERNAME" != "" ]; then
+    ENTRYCMD+=("--accountThreeUsername=$PLUGIN_ACCOUNTTHREEUSERNAME")
+fi
+
+if [ "$PLUGIN_ACCOUNTTHREEPASSWORD" != "" ]; then
+    ENTRYCMD+=("--accountThreePassword=$PLUGIN_ACCOUNTTHREEPASSWORD")
+fi
+
 if [ "$PLUGIN_DISABLEDTESTS" != "" ]; then
     ENTRYCMD+=("--disabledTests=$PLUGIN_DISABLEDTESTS")
 fi
