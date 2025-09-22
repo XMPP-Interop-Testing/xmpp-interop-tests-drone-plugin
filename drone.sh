@@ -64,6 +64,10 @@ if [ "$PLUGIN_ENABLEDSPECIFICATIONS" != "" ]; then
     ENTRYCMD+=("--enabledSpecifications=$PLUGIN_ENABLEDSPECIFICATIONS")
 fi
 
+if [ "$PLUGIN_FAILONIMPOSSIBLETEST" != "" ]; then
+    ENTRYCMD+=("--failOnImpossibleTest=$PLUGIN_FAILONIMPOSSIBLETEST")
+fi
+
 echo "Running: ${ENTRYCMD[*]}"
 
 "${ENTRYCMD[@]}"

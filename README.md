@@ -43,6 +43,7 @@ The plugin can be configured using the following settings:
 - `disabledSpecifications`: _(optional)_ A comma-separated list of specifications (not case-sensitive) that are to be skipped. For example: `XEP-0045,XEP-0060`
 - `enabledTests`: _(optional)_ A comma-separated list of tests that are the only ones to be run. For example: `EntityCapsTest,SoftwareInfoIntegrationTest`
 - `enabledSpecifications`: _(optional)_ A comma-separated list of specifications (not case-sensitive) that are the only ones to be run. For example: `XEP-0045,XEP-0060`
+- `failOnImpossibleTest`: _(optional)_ If set to 'true', fails the test run if any configured tests were impossible to execute. (default: 'false')
 - `logDir`: _(optional)_ The directory in which the test output and logs are to be stored. This directory will be created, if it does not already exist. Default value: `./output`
 
 ### Provisioning Test Accounts
