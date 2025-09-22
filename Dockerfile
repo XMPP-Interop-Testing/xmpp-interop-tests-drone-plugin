@@ -1,4 +1,4 @@
-ARG SINTSE_VERSION="main"
+ARG SINTSE_VERSION="v1.7.0"
 
 FROM ghcr.io/xmpp-interop-testing/xmpp_interop_tests:${SINTSE_VERSION}
 
