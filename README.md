@@ -12,20 +12,6 @@ Note that most CI environments have a distinct way to configure this plugin.
 
 For more information, please visit our project website at https://xmpp-interop-testing.github.io/
 
-## Test Account Provisioning
-
-The plugin will typically execute various tests. Each test will use a fresh set of XMPP user accounts. These are
-automatically provisioned by the testing framework. They will be removed after the test execution.
-
-The following strategies for test account provisioning are supported:
-
-- By default, the test accounts are provisioned using XMPP's "In-band Registration" functionality (as defined in
-  [XEP-0077](https://xmpp.org/extensions/xep-0077.html)).
-- Alternatively, test accounts can be provisioned using XMPP 'Ad-hoc commands', as specified in
-  [XEP-0133: Service Administration](https://xmpp.org/extensions/xep-0133.html). To enable this way of provisioning, the
-  plugin's configuration must include the optional `adminAccountUsername` and `adminAccountPassword` inputs (as
-  documented below).
-
 ## Inputs
 The plugin can be configured using the following settings:
 - `host`: IP address or DNS name of the XMPP service to run the tests on. Default value: `127.0.0.1`
